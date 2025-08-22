@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Addition of Numbers : ">
+        <lightning-input type="number" label="First Number" name="firstNumber" onchange={handlefirstNumber}></lightning-input>
+        <lightning-input type="number" label="Second Number" name="secondNumber" onchange={handlesecondNumber}></lightning-input>
+    </lightning-card>
+
+    <template if:true={result}>
+        <div class="slds-m-around_medium white-background">
+            <p>The final result is : {result}</p>
+        </div>
+    </template>
+        <lightning-button variant="brand" label="Calculate" title="Calculate" onclick={handleClick}></lightning-button>
+</template>

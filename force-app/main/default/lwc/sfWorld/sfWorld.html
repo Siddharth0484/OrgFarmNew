@@ -1,0 +1,29 @@
+<template>
+
+
+     <lightning-card title="Hello World ">
+            <div class="slds-m-around_medium white-background">
+                Hello World !! How are you !!
+            </div>
+
+            <div class="slds-m-bottom_medium">
+                <lightning-input
+                    label="Enter your name"
+                    value={name}
+                    onchange={handleNameChange}>
+                </lightning-input>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <lightning-button
+                    variant="brand"
+                    label="CLICK HERE"
+                    title="titleName"
+                    onclick={handleClick}>
+                </lightning-button>
+            </div>
+            The entered data is {varString}
+        </lightning-card>
+
+
+
+    </template>

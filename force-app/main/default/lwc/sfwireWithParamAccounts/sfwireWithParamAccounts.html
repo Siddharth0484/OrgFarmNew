@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Wire Method for List of Colleges">
+        <div class="slds-m-around_medium">
+            <!-- Check if data is available -->
+            <template if:true={varData}>
+                <p>List of Colleges with Highest Budget</p> <!-- Display the data -->
+                <ul class="slds-m-around_medium">
+                    <template for:each={varData} for:item="college">
+                        <div key={college.Id} class="slds-m-around_medium slds-box slds-theme_default" style="background-color: #e3f2fd;"> 
+                            <p><strong>Name:</strong> {college.Name}</p>
+                            <p><strong>Total Budget:</strong> {college.Total_Budget__c}</p>
+                            <p><strong>Id:</strong> {college.Id}</p>
+                        </div>
+                    </template>
+                </ul>
+            </template>
+            <!-- Check if there is an error -->
+            <template if:false={varData}>
+                <p>The Message is : {varError}</p> <!-- Display the error message -->
+            </template>
+        </div>
+    </lightning-card>
+</template>

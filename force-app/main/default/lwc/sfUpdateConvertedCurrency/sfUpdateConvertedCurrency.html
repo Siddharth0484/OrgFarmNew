@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Convert  and Insert Total Budget">
+        <div class="slds-p-around_medium">
+            
+            <lightning-input
+                type="number"
+                label="Enter amount in USD"
+                value={usdAmount}
+                onchange={handleChange}>
+            </lightning-input>
+
+            <lightning-button
+                variant="destructive"
+                label="Convert  and Insert to INR"
+                onclick={handleConvert}
+                class="slds-m-top_medium">
+            </lightning-button>
+
+            <template if:true={hasResult}>
+                <p class="slds-m-top_medium">
+                    {usdAmount} USD = <strong>{convertedAmount}</strong> INR
+                </p>
+            </template>
+
+            <template if:true={hasError}>
+                <p class="slds-text-color_error slds-m-top_medium">{error}</p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>
