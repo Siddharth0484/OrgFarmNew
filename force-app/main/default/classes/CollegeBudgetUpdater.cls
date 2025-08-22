@@ -3,7 +3,7 @@ public class CollegeBudgetUpdater {
     @InvocableMethod(label='Update Edited College Budget' description='Set Total_Budget__c=5555 if Location is Mumbai on edited record(s)')
     public static void updateBudgetForEditedRecords(List<Id> collegeIds) {
         if (collegeIds == null || collegeIds.isEmpty()) {
-            return;
+            return;///ffff
         }
         
         List<College__c> collegesToUpdate = [SELECT Id, Location__c, Total_Budget__c FROM College__c WHERE Id IN :collegeIds];
