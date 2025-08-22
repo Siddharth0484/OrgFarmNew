@@ -1,8 +1,8 @@
 global class BatchCollegeBudget implements Database.Batchable<SObject> { //Database.executeBatch(new BatchCollegeBudget(), 200);
 
     global Database.QueryLocator start(Database.BatchableContext bc) {
-        // Return a QueryLocator to handle large volumes
-        return Database.getQueryLocator(
+        // Return a QueryLocator to handle large volumes newew
+         return Database.getQueryLocator(
             'SELECT Id, Total_Budget__c FROM College__c WHERE Total_Budget__c >= 320000'
         );
     }
