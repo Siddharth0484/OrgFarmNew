@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Student_with_discount_greater_900</fullName>
+        <description>Email Student with discount greater 900</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>siddmit07962@agentforce.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Student_Email</template>
+    </alerts>
+    <outboundMessages>
+        <fullName>HR_system</fullName>
+        <apiVersion>64.0</apiVersion>
+        <endpointUrl>https://webhook.site/6f987816-35bd-4322-af3e-42a30f4673a1</endpointUrl>
+        <fields>Branch__c</fields>
+        <fields>College__c</fields>
+        <fields>DOB__c</fields>
+        <fields>Email__c</fields>
+        <fields>Enrollment_Year__c</fields>
+        <fields>Id</fields>
+        <fields>Name</fields>
+        <fields>Phone__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>siddmit07962@agentforce.com</integrationUser>
+        <name>HR system</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>New_Student_Data</fullName>
+        <apiVersion>64.0</apiVersion>
+        <endpointUrl>https://webhook.site/6f987816-35bd-4322-af3e-42a30f4673a1</endpointUrl>
+        <fields>Branch__c</fields>
+        <fields>College__c</fields>
+        <fields>DOB__c</fields>
+        <fields>Email__c</fields>
+        <fields>Enrollment_Year__c</fields>
+        <fields>Id</fields>
+        <fields>Name</fields>
+        <fields>Parent_College_Id__c</fields>
+        <fields>Phone__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>siddmit07962@agentforce.com</integrationUser>
+        <name>New Student Data</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Student Data</fullName>
+        <actions>
+            <name>New_Student_Data</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Student__c.Branch__c</field>
+            <operation>equals</operation>
+            <value>Science</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

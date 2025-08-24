@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <interviewLabel>cllge flow sd {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>cllge flow sd</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_rc</name>
+        <label>get rc</label>
+        <locationX>671</locationX>
+        <locationY>324</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>update</targetReference>
+        </connector>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>College__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>update</name>
+        <label>update</label>
+        <locationX>673</locationX>
+        <locationY>464</locationY>
+        <inputAssignments>
+            <field>Location__c</field>
+            <value>
+                <stringValue>Mumbai</stringValue>
+            </value>
+        </inputAssignments>
+        <object>College__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>544</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>get_rc</targetReference>
+        </connector>
+        <schedule>
+            <frequency>Once</frequency>
+            <startDate>2025-07-15</startDate>
+            <startTime>16:18:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

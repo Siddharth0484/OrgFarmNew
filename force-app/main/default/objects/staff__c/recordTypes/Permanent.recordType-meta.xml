@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Permanent</fullName>
+    <active>true</active>
+    <description>Permanent Staffs</description>
+    <label>Permanent</label>
+    <picklistValues>
+        <picklist>Certification__c</picklist>
+        <values>
+            <fullName>ABC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C%2B%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCNA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Java</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SF</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Education__c</picklist>
+        <values>
+            <fullName>B ARCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B COM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B TECH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M TECH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MCA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

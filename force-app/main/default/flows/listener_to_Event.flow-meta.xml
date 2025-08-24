@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <interviewLabel>listener to Event {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>listener to Event</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_student</name>
+        <label>Create student</label>
+        <locationX>615</locationX>
+        <locationY>226</locationY>
+        <inputAssignments>
+            <field>College__c</field>
+            <value>
+                <stringValue>a00gL00000B1ZQTQA3</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Enrollment_Year__c</field>
+            <value>
+                <elementReference>$Record.Enrollment_year__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>$Record.Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Student__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>490</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Create_student</targetReference>
+        </connector>
+        <flowRunAsUser>TriggeringUser</flowRunAsUser>
+        <object>External_Student_data__e</object>
+        <triggerType>PlatformEvent</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

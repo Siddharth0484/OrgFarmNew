@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Prd</fullName>
+        <description>Prd</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>siddmit07962@agentforce.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Test_1753108365291</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>update</fullName>
+        <field>Description</field>
+        <formula>&apos;Approved&apos;</formula>
+        <name>update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Acc Wf1</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.AccountSource</field>
+            <operation>equals</operation>
+            <value>Purchased List</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Account  WFlow</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.AccountSource</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>prd</fullName>
+        <actions>
+            <name>Prd</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>notEqual</operation>
+            <value>12xzs</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

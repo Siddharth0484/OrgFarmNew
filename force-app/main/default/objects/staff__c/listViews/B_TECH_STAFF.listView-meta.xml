@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B_TECH_STAFF</fullName>
+    <columns>NAME</columns>
+    <columns>Education__c</columns>
+    <columns>Location__c</columns>
+    <columns>Email__c</columns>
+    <columns>Department__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Education__c</field>
+        <operation>equals</operation>
+        <value>B TECH</value>
+    </filters>
+    <label>B TECH - STAFF</label>
+</ListView>

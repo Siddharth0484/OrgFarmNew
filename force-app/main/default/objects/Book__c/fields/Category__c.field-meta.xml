@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <label>Category</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Arts</fullName>
+                <default>false</default>
+                <label>Arts</label>
+            </value>
+            <value>
+                <fullName>Science</fullName>
+                <default>false</default>
+                <label>Science</label>
+            </value>
+            <value>
+                <fullName>Commerce</fullName>
+                <default>false</default>
+                <label>Commerce</label>
+            </value>
+            <value>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+                <label>Engineering</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

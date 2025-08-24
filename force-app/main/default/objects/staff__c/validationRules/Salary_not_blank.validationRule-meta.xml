@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salary_not_blank</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISNULL(Salary__c) &amp;&amp; RecordType.DeveloperName == &apos;Permanent&apos;</errorConditionFormula>
+    <errorMessage>Salary cannot be blank</errorMessage>
+</ValidationRule>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Flow_Action_Outbound_message</name>
+        <label>Flow Action - Outbound message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>College__c.College_Data</actionName>
+        <actionType>outboundMessage</actionType>
+        <connector>
+            <targetReference>Flow_Email_alert_Colleges</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <nameSegment>College__c.College_Data</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <actionCalls>
+        <name>Flow_Email_alert_Colleges</name>
+        <label>Flow Email alert - Colleges</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>College__c.Email_College_Alerts</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>College__c.Email_College_Alerts</nameSegment>
+        <offset>0</offset>
+    </actionCalls>
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Email alert and Outbound Message V 3.0 .. New functionality  added</description>
+    <environments>Default</environments>
+    <interviewLabel>College Flow - Send Emai {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>College Flow - Send Emai</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Flow_Action_Outbound_message</targetReference>
+        </connector>
+        <object>College__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

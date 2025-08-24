@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>EA_Job_Creation</fullName>
+        <ccEmails>alkapandey0216@gmail.com</ccEmails>
+        <ccEmails>munishwarparth@gmail.com</ccEmails>
+        <ccEmails>ayushkamble812@gmail.com</ccEmails>
+        <description>EA Job Creation</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>siddmit07962@agentforce.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Job_Opening_Email_Temp</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Update_JO_Location</fullName>
+        <field>Location__c</field>
+        <formula>&apos;Pune&apos;</formula>
+        <name>Update JO Location</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>JO Edit WFRule</fullName>
+        <actions>
+            <name>EA_Job_Creation</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>Salary__c &gt; 6000 &amp;&amp;  Technology__c != &apos;B Tech&apos;</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>JO WFRule</fullName>
+        <actions>
+            <name>EA_Job_Creation</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Update_JO_Location</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>JO Email Alert when a JO is &gt; 5000 and update location field</description>
+        <formula>ISBLANK(Location__c ) &amp;&amp;  Salary__c &gt;5000</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

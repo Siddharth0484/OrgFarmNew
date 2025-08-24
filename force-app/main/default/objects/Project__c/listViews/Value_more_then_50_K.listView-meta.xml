@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_more_then_50_K</fullName>
+    <columns>NAME</columns>
+    <columns>Project_value__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project_value__c</field>
+        <operation>greaterThan</operation>
+        <value>49999</value>
+    </filters>
+    <label>Value more then 50 K</label>
+</ListView>

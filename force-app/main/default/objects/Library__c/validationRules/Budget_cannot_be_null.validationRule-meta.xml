@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_cannot_be_null</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK(Total_Budget__c) || Total_Budget__c &lt; 5000</errorConditionFormula>
+    <errorMessage>Total Budget cannot be Null and should be more then 5000</errorMessage>
+</ValidationRule>

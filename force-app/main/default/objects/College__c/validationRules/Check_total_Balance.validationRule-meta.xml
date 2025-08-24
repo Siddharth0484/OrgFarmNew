@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_total_Balance</fullName>
+    <active>true</active>
+    <errorConditionFormula>Total_Child_Discount__c &gt;10000</errorConditionFormula>
+    <errorMessage>Maximum  budget exceed  - of 10 k</errorMessage>
+</ValidationRule>

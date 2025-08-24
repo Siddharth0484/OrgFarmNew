@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>email_Library_Alert</fullName>
+        <ccEmails>avinash.dayre28@gmail.com </ccEmails>
+        <ccEmails>nikwade.damini95@gmail.com </ccEmails>
+        <ccEmails>chetanaims@gmail.com</ccEmails>
+        <description>email Library -Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>siddmit07962@agentforce.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Library_Template</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Update_Lib_Location</fullName>
+        <field>Location__c</field>
+        <formula>&apos;Pune&apos;</formula>
+        <name>Update Lib Location</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Email Lib creation</fullName>
+        <actions>
+            <name>email_Library_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Update_Lib_Location</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>ISBLANK(Location__c) &amp;&amp;  Total_Budget__c &gt; 50000</description>
+        <formula>ISBLANK(Location__c) &amp;&amp;  Total_Budget__c &gt; 50000</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email New Library Creation</fullName>
+        <actions>
+            <name>Update_Lib_Location</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISBLANK(Location__c)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

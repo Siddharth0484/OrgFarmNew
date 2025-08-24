@@ -32,5 +32,72 @@
         <members>*</members>
         <name>StaticResource</name>
     </types>
+     <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>BusinessProcess</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CompactLayout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>WebLink</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ValidationRule</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Workflow</name>
+    </types>
+     <types>
+        <members>*</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>PermissionSet</name>
+    </types>
+
+    <!-- Automation -->
+    <types>
+        <members>*</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>FlowDefinition</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AssignmentRules</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AutoResponseRules</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>EscalationRules</name>
+    </types>
+
     <version>64.0</version>
 </Package>

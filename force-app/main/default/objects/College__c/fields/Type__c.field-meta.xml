@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Course</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>B Com</fullName>
+                <default>false</default>
+                <label>B Com</label>
+            </value>
+            <value>
+                <fullName>B Arch</fullName>
+                <default>false</default>
+                <label>B Arch</label>
+            </value>
+            <value>
+                <fullName>B TECH IT</fullName>
+                <default>false</default>
+                <label>B TECH IT</label>
+            </value>
+            <value>
+                <fullName>B tech</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>B tech</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

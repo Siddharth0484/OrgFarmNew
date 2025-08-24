@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Auto response Case</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <senderEmail>siddmit07@gmail.com</senderEmail>
+            <senderName>Sf support</senderName>
+            <template>unfiled$public/SupportCaseResponse</template>
+        </ruleEntry>
+    </autoResponseRule>
+    <autoResponseRule>
+        <fullName>case rule</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <senderEmail>siddmit07@gmail.com</senderEmail>
+            <senderName>Support Team</senderName>
+            <template>unfiled$public/case_auto_response</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>

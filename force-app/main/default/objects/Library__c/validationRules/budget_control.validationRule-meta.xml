@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>budget_control</fullName>
+    <active>true</active>
+    <errorConditionFormula>Total_Child_Budget__c &gt; Total_Budget__c</errorConditionFormula>
+    <errorMessage>maximum budget exceeded</errorMessage>
+</ValidationRule>

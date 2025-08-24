@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NRICandidates</fullName>
+    <columns>NAME</columns>
+    <columns>Certification__c</columns>
+    <columns>Date_of_Birth__c</columns>
+    <columns>Education__c</columns>
+    <columns>Experience_in_Years__c</columns>
+    <columns>Gender__c</columns>
+    <columns>Job_Opening__c</columns>
+    <columns>Location__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>Parent_JO_Id__c</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Salary__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Candidates__c.NRI</value>
+    </filters>
+    <label>NRI Candidates</label>
+</ListView>
